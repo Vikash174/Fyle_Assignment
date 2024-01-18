@@ -31,7 +31,6 @@ dropDownMenu.addEventListener("click", function (e) {
   const target = e.target;
   // Check if the clicked element is a dropdown item
   if (target.classList.contains("dropdown-item")) {
-    console.log(target.innerHTML);
     selectedValue = target.innerHTML;
     dropdown.querySelector(
       ".dropdown-btn"
@@ -104,9 +103,7 @@ async function getUserInfo() {
     displayUserData(json);
 
     getRepositories(selectedValue);
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 
 // Function to get repositories
@@ -126,9 +123,8 @@ const getRepositories = async (resultPerPage, currPage) => {
       return;
     }
 
-    console.log(resultPerPage);
     const repositories = await res.json();
-    console.log(repositories);
+
     repositories.forEach(async (repo) => {
       const repoElement = document.createElement("div");
       repoElement.className += "repository";
@@ -153,11 +149,7 @@ const getRepositories = async (resultPerPage, currPage) => {
 
       repositoriesContainer.appendChild(repoElement);
     });
-  } catch (error) {
-    console.log(error.message);
-  }
-
-  console.log(repositoriesContainer);
+  } catch (error) {}
 };
 
 // Function to display pagination
