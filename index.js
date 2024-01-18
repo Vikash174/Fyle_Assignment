@@ -77,9 +77,17 @@ async function getUserInfo() {
   try {
     const res = await fetch(`${apiUrl}${username.value}`);
     const json = await res.json();
-    console.log(json);
+
+    if (res.status === 403) {
+      // Forbidden, handle accordingly
+      errorMessage.textContent =
+        "API request reached it's limit, please try again after an hour.";
+      errorMessage.classList.remove("hide");
+      return;
+    }
 
     if (json.message === "Not Found") {
+      errorMessage.textContent = "User not found.";
       errorMessage.classList.remove("hide");
       return;
     } else {
@@ -109,6 +117,15 @@ const getRepositories = async (resultPerPage, currPage) => {
     const res = await fetch(
       `${apiUrl}${username.value}/repos?per_page=${resultPerPage}&page=${currPage}`
     );
+
+    if (res.status === 403) {
+      // Forbidden, handle accordingly
+      errorMessage.textContent =
+        "API request forbidden. Check your access permissions.";
+      errorMessage.classList.remove("hide");
+      return;
+    }
+
     console.log(resultPerPage);
     const repositories = await res.json();
     console.log(repositories);
