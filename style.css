@@ -1,0 +1,233 @@
+/* Website Header Styling */
+.website-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #222;
+    /* Dark background color */
+    color: white;
+    /* Light text color */
+}
+
+#go_back_to_search_page_btn {
+    background-color: #444;
+    /* Slightly lighter background color */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    /* Add some margin to separate the button from the title */
+}
+
+#go_back_to_search_page_btn:hover {
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (min-width: 768px) {
+    .website-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #go_back_to_search_page_btn {
+        margin-top: 0;
+    }
+}
+
+/* ---------- Search Container Styling -------------- */
+.error-message {
+    color: #ff5555;
+    /* Reddish color for error messages */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: #111;
+    /* Dark background color for the body */
+    color: white;
+    /* Light text color */
+}
+
+/* Profile Header Container Styling */
+.profile-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+    background-color: #222;
+    /* Dark background color */
+    color: white;
+    /* Light text color */
+}
+
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#profile_photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 600px) {
+    .profile-info-container {
+        text-align: center;
+    }
+
+    #profile_photo {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .profile-header-container {
+        align-items: start;
+
+    }
+
+    .profile-info-container {
+        align-items: flex-start;
+    }
+
+    #profile_photo {
+        margin-right: 20px;
+    }
+}
+
+/* Repositories Container Styling */
+.repositories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.repository {
+    border: 1px solid #444;
+    /* Slightly lighter border color */
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    background-color: #333;
+    /* Dark background color */
+    color: white;
+    /* Light text color */
+}
+
+.techstack-container {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.techstack {
+    background-color: #555;
+    /* Slightly lighter background color */
+    border-radius: 10%;
+    padding: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 600px) {
+    .repositories-container {
+        padding: 10px;
+    }
+
+    .repository {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .repositories-container {
+        justify-content: space-between;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+/* Styling for Pagination and Dropdown */
+#pagination,
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    /* Add margin for spacing */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    /* Dark background color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    max-height: 200px;
+    top: -200px;
+    left: 45%;
+    overflow-y: auto;
+}
+
+.dropdown-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #45a049;
+}
+
+.dropdown-item {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+    /* Light text color */
+}
+
+.dropdown-item:hover {
+    background-color: #444;
+    /* Slightly lighter background color */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (min-width: 768px) {
+
+    #pagination,
+    .dropdown {
+        flex-direction: row;
+    }
+
+    .dropdown {
+        align-items: flex-start;
+    }
+
+    .dropdown-btn {
+        margin-left: 10px;
+    }
+}

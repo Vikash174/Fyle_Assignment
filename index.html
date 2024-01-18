@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Repositories</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Website Header -->
+    <div class="website-header">
+      <h1>
+        <!-- Icon: GitHub -->
+        <i class="fab fa-github"></i> Github Repositories
+      </h1>
+      <span class="hide" id="go_back_to_search_page_btn">
+        <!-- Icon: Arrow Left -->
+        Go Back To Search Page
+      </span>
+    </div>
+
+    <!-- Search Container -->
+    <div class="container mt-4" id="search_container">
+      <div class="form-group">
+        <label for="username">Enter Github Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="Enter username"
+        />
+      </div>
+      <p class="error-message hide">
+        <!-- Icon: Exclamation Triangle -->
+        <i class="fas fa-exclamation-triangle"></i> user name is not valid
+      </p>
+      <button class="btn btn-primary" id="get_info_btn">
+        <!-- Icon: Search -->
+        Get Info
+      </button>
+    </div>
+
+    <!-- Main Content Body -->
+    <div class="main-body-content">
+      <!-- Profile Header Container -->
+      <div class="profile-header-container hide">
+        <div class="profile-info-container">
+          <div class="profile-photo-container">
+            <img
+              id="profile_photo"
+              src="https://avatars.githubusercontent.com/u/71267021?v=4"
+              alt=""
+            />
+          </div>
+          <div>
+            <!-- User Profile Information -->
+            <h2 id="user_name">
+              <!-- Icon: User -->
+              <i class="fas fa-user"></i> Vikash Rai
+            </h2>
+            <p id="user_bio">
+              <!-- Icon: Info Circle -->
+              <i class="fas fa-info-circle"></i> Hello, My name is Vikash Rai. I
+              have 1-year+ of experience in software engineering. I graduated in
+              2022. I spend most of my time with JavaScript
+            </p>
+            <p id="user_adderes">
+              <!-- Icon: Map Marker Alt -->
+              <i class="fas fa-map-marker-alt"></i> Jabalpur, Madhya Pradesh,
+              India
+            </p>
+            <p>
+              <!-- Icon: Twitter -->
+              Twitter
+              <a id="user_twitter_url" href="https://twitter.com/vikash174">
+                https://twitter.com/vikash174
+              </a>
+            </p>
+          </div>
+        </div>
+        <div>
+          <!-- User GitHub Profile Link -->
+          <p>
+            <a id="user_github" href="https://github.com/vikash174">
+              <!-- Icon: GitHub -->
+              <i class="fab fa-github"></i> https://github.com/vikash174
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Repositories Container -->
+      <div>
+        <div class="repositories-container"></div>
+      </div>
+
+      <!-- Pagination Section -->
+      <div id="pagination"></div>
+
+      <!-- Dropdown for Result per Page -->
+      <div class="dropdown">
+        <div class="dropdown-menu">
+          <!-- Dropdown Items with Result per Page Options -->
+          <a href="#" class="dropdown-item">10</a>
+          <a href="#" class="dropdown-item">20</a>
+          <a href="#" class="dropdown-item">30</a>
+          <a href="#" class="dropdown-item">40</a>
+          <a href="#" class="dropdown-item">50</a>
+          <a href="#" class="dropdown-item">60</a>
+          <a href="#" class="dropdown-item">70</a>
+          <a href="#" class="dropdown-item">80</a>
+          <a href="#" class="dropdown-item">90</a>
+          <a href="#" class="dropdown-item">100</a>
+        </div>
+        <!-- Button to Trigger Dropdown -->
+        <button class="dropdown-btn">
+          <!-- Icon: List -->
+          result per page : 10
+        </button>
+      </div>
+    </div>
+
+    <!-- JavaScript and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
